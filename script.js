@@ -51,3 +51,9 @@ function clickColor(event) {
     h2.innerText = 'Errou';
   }
 }
+
+const btnReset = document.getElementById('reset-game');
+
+btnReset.addEventListener('click',resetGame);
+
+
