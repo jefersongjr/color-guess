@@ -1,4 +1,4 @@
-let color1 = ` ${ Math.floor(Math.random() * 254)}, ${ Math.floor(Math.random() * 254)} , ${ Math.floor(Math.random() * 254)}`
+let color1 = `(${ Math.floor(Math.random() * 254)}, ${ Math.floor(Math.random() * 254)} , ${ Math.floor(Math.random() * 254)})`
 
 const section = document.getElementById('text');
 function createP(){
