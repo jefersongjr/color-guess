@@ -1,6 +1,44 @@
-.ball{
-    display: inline-block;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1580234811497-9df7fd2f357e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=867&q=80) ;
+    background-size:cover;
+}
+
+.ball {
+  display: inline-block;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+#text {
+  margin-bottom: 15px;
+}
+
+main {
+    background-color: rgb(217, 173, 228);
+  margin: 0 auto 15px;
+  text-align: center;
+  width: 500px;
+  opacity: 0.8;
+}
+
+header {
+    background-color: rgb(217, 173, 228);
+  margin: 100px auto 15px;
+  text-align: center;
+  width: 500px;
+  opacity: 0.8;
+}
+
+div {
+  margin-bottom: 12px;
+}
+
+h2 {
+  margin-bottom: 12px;
 }
