@@ -8,6 +8,7 @@ function createColors(ball) {
     Math.random() * 254
   )}, ${Math.floor(Math.random() * 254)} , ${Math.floor(Math.random() * 254)})`;
   div.addEventListener('click', clickColor);
+
   return div;
 }
 
@@ -25,7 +26,7 @@ const rgbValue = getRgb.getPropertyValue('background-color');
 const section = document.getElementById('text');
 function createSpan() {
   const span = document.createElement('span');
-  span.innerHTML = `${rgbValue}`;
+  span.innerHTML = rgbValue;
   span.id = 'rgb-color';
   section.appendChild(span);
 }
