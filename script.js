@@ -31,14 +31,14 @@ function xy() {
 }
 const section = document.getElementById('text');
 
-function createP() {
-  const p = document.createElement('p');
-  p.innerText = `${xy()}`;
-  p.id = 'rgb-color';
-  section.appendChild(p);
+function createSpan() {
+  const span = document.createElement('span');
+  span.innerText = `${xy()}`;
+  span.id = 'rgb-color';
+  section.appendChild(span);
 }
-createP();
-const p = document.querySelector('#rgb-color');
+createSpan();
+const span = document.querySelector('#rgb-color');
 function createAnswer(x) {
   const answer = document.createElement('h2');
   answer.id = 'answer';
@@ -71,7 +71,8 @@ function resetGame() {
     )}, ${Math.floor(Math.random() * 254)}, ${Math.floor(
       Math.random() * 254
     )})`;
+
+    span.innerText = `${xy()}`;
   }
-    p.innerText = `chupa cu `;
 }
 btnReset.addEventListener('click', resetGame);
