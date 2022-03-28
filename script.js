@@ -6,7 +6,7 @@ function createColors(ball) {
   div.innerHTML = '';
   div.style.backgroundColor = `rgb(${Math.floor(
     Math.random() * 254
-  )}, ${Math.floor(Math.random() * 254)},${Math.floor(Math.random() * 254)})`;
+  )}, ${Math.floor(Math.random() * 254)} , ${Math.floor(Math.random() * 254)})`;
   div.addEventListener('click', clickColor);
   return div;
 }
@@ -17,23 +17,21 @@ function appendColors() {
   }
 }
 appendColors();
-function xy() {
-  let i = Math.floor(Math.random() * 5);
-  const getCollor = document.querySelectorAll('.ball')[i];
-  const getRgb = window.getComputedStyle(getCollor);
-  const rgbValue = getRgb.getPropertyValue('background-color');
-  return rgbValue;
-}
-const section = document.getElementById('text');
+let i = Math.floor(Math.random() * 5);
+const getCollor = document.querySelectorAll('.ball')[i];
+const getRgb = window.getComputedStyle(getCollor);
+const rgbValue = getRgb.getPropertyValue('background-color');
 
+const section = document.getElementById('text');
 function createSpan() {
   const span = document.createElement('span');
-  span.innerText = `${xy()}`;
+  span.innerHTML = `${rgbValue}`;
   span.id = 'rgb-color';
   section.appendChild(span);
 }
 createSpan();
-const span = document.querySelector('#rgb-color');
+
+const span = document.getElementById('rgb-color');
 function createAnswer(x) {
   const answer = document.createElement('h2');
   answer.id = 'answer';
@@ -48,16 +46,16 @@ const h2 = document.getElementById('answer');
 function clickColor(event) {
   let click = window.getComputedStyle(event.target);
   let click2 = click.getPropertyValue('background-color');
-  if (click2 === xy()) {
+  if (click2 === rgbValue) {
     h2.innerText = 'Acertou!';
-  } else if (click2 !== xy()) {
+  } else if (click2 !== rgbValue) {
     h2.innerText = 'Errou! Tente novamente!';
   }
 }
 
 const btnReset = document.getElementById('reset-game');
 
-function resetGame() {
+function resetGame(event) {
   const getCollor = document.querySelectorAll('.ball');
   h2.innerText = 'Escolha uma cor';
   for (let index = 0; index < getCollor.length; index += 1) {
@@ -66,8 +64,12 @@ function resetGame() {
     )}, ${Math.floor(Math.random() * 254)}, ${Math.floor(
       Math.random() * 254
     )})`;
-
-    span.innerText = `${xy()}`;
+    const getCollor1 = document.querySelectorAll('.ball')[index];
+    const getRgb1 = window.getComputedStyle(getCollor1);
+    const rgbValue1 = getRgb1.getPropertyValue('background-color');
+    span.innerText = rgbValue1;
+   
   }
 }
+
 btnReset.addEventListener('click', resetGame);
