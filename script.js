@@ -19,9 +19,9 @@ function appendColors() {
 }
 appendColors();
 let i = Math.floor(Math.random() * 5);
-const getCollor = document.querySelectorAll('.ball')[i];
-const getRgb = window.getComputedStyle(getCollor);
-const rgbValue = getRgb.getPropertyValue('background-color');
+let getCollor = document.querySelectorAll('.ball')[i];
+let getRgb = window.getComputedStyle(getCollor);
+let rgbValue = getRgb.getPropertyValue('background-color');
 
 const section = document.getElementById('text');
 function createSpan() {
@@ -56,8 +56,8 @@ function clickColor(event) {
 
 const btnReset = document.getElementById('reset-game');
 
-function resetGame(event) {
-  const getCollor = document.querySelectorAll('.ball');
+function resetGame() {
+  let getCollor = document.querySelectorAll('.ball');
   h2.innerText = 'Escolha uma cor';
   for (let index = 0; index < getCollor.length; index += 1) {
     getCollor[index].style.backgroundColor = `rgb(${Math.floor(
@@ -65,12 +65,11 @@ function resetGame(event) {
     )}, ${Math.floor(Math.random() * 254)}, ${Math.floor(
       Math.random() * 254
     )})`;
-    const getCollor1 = document.querySelectorAll('.ball')[index];
-    const getRgb1 = window.getComputedStyle(getCollor1);
-    const rgbValue1 = getRgb1.getPropertyValue('background-color');
-    span.innerText = rgbValue1;
-   
   }
+  getCollor = document.querySelectorAll('.ball')[Math.floor(Math.random() * 5)];
+  getRgb = window.getComputedStyle(getCollor);
+  rgbValue = getRgb.getPropertyValue('background-color');
+  span.innerText = rgbValue;
 }
 
 btnReset.addEventListener('click', resetGame);
