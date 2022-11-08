@@ -1,4 +1,8 @@
 const section2 = document.getElementById('colors');
+const scoreElement = document.getElementById('score');
+
+let score = 0;
+scoreElement.innerHTML = `${score}`;
 
 function createColors(ball) {
   const div = document.createElement('div');
@@ -49,6 +53,8 @@ function clickColor(event) {
   let click2 = click.getPropertyValue('background-color');
   if (click2 === rgbValue) {
     h2.innerText = 'Acertou!';
+    score += 3;
+    scoreElement.innerHTML = `${score}`;
   } else if (click2 !== rgbValue) {
     h2.innerText = 'Errou! Tente novamente!';
   }
