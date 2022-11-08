@@ -1,10 +1,26 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Color Guess
+
+![prévia](https://github.com/jefersongjr/color-guess/blob/main/preview.gif)
+
+##  🚀📋 Sobre:
+
+**Color Guess** foi um projeto desenvolvido por mim [Jeferson Gomes](https://www.linkedin.com/in/jefersongjr/) 
+durante o curso de formação de desenvolvimento Full Stack da [Trybe](https://www.betrybe.com/), durante o Módulo de Fundamentos 
+de desenvolvimento Web.
+Trabalhando conceitos de Html 5 , Css3, JavaScript e DOM.
+
+veja o resultado clicando [Aqui](https://color-guess-zeta.vercel.app/)
+
+
+## 🛠️ Construído com: 
+
+* HTML5
+* CSS3
+* JavaScript ES6+
+
+## :computer: Skills Desenvolvidas:
+
+* Desenvolvimento de uma página estática utilizando conceitos de HTML Semântico
+* Estilização de uma página web Utilizando CSS
+* Manipular o DOM
+* Manipular o Javascript
